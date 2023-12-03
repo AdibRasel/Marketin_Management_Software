@@ -1,19 +1,20 @@
-import Home from "./Page/Home/Home"
-import Login from "./Page/Login/Login"
-import Registration from "./Page/Registration/Registration"
+import React, { useState } from 'react';
+import AuthenticationRouter from './Router/AuthenticationRouter';
+import UnAuthenticatedRouter from './Router/UnAuthenticatedRouter';
+
+const App: React.FC = () => {
+  const [Token, setToken] = useState(true);
 
 
-function App() {
+  if (Token === true) {
+    return (
+      <AuthenticationRouter />
+    )
+  } else {
+    return (
+      <UnAuthenticatedRouter />
+    )
+  }
+};
 
-  return (
-    <>
-
-    <Home />
-    <Login />
-    <Registration />
-
-    </>
-  )
-}
-
-export default App
+export default App;
