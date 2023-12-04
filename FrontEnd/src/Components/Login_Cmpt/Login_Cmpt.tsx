@@ -74,6 +74,12 @@ const Login_Cmpt = () => {
 //     };
 
 
+    const Submit =()=>{
+        localStorage.setItem('Token', "RaselHossainAdib");
+    }
+
+
+
   // if("aa" == "aa"){
 
 
@@ -260,7 +266,7 @@ const HandalFrom =(e)=>{
                             </p>
 
                             <h2 className="font-weight-bold" style={{ textAlign: 'center' }}>
-                                HR-Allowance
+                            Marketing Management Software
                             </h2>
                             <h5 className="text-dark" style={{ textAlign: 'center', margin: '0px' }}>
                                 {/* <span>School Management System</span> */}
@@ -303,12 +309,12 @@ const HandalFrom =(e)=>{
 
 
                             <div className="d-flex py-1">
-                                <div className="Login_Register">
+                                <div className="">
                                     <NavLink to="/ForgotPasswordEmailOrNumber" className="">
                                         Forgot Password?
                                     </NavLink>
                                 </div>
-                                <div className="Login_Forgot">
+                                <div className="ms-auto">
                                     <NavLink to="/Register" className="">
                                         Register Now
                                     </NavLink>
@@ -319,7 +325,7 @@ const HandalFrom =(e)=>{
                             {/* <input type="submit" name="login" className="log-btn" value="Log In" /> */}
                             <div className="form-button-group transparent d-grid gap-2 mt-4 bg-white">
                                 {/* <button onClick={LoginButton} type="submit" className="btn btn-primary btn-block"> */}
-                                <button type="submit" className="btn btn-primary btn-block">
+                                <button onClick={Submit} type="submit" className="btn btn-primary btn-block">
                                     Log in
                                 </button>
                             </div>
